@@ -7,4 +7,7 @@ class Solution:
                 l = l + 1
             r = r + 1
 
-        return l == len(s)
+        if l == len(s):
+            return True
+        else:
+            return False
