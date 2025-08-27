@@ -20,22 +20,8 @@ class Solution:
         
         if set(count1.keys()) != set(count2.keys()):
             return False
-        freq1 = {}
-        freq2 = {}
-
-        for f1 in count1.values():
-            if f1 in freq1:
-                freq1[f1] += 1
-            else:
-                freq1[f1] = 1
-
-        for f2 in count2.values():
-            if f2 in freq2:
-                freq2[f2] += 1
-            else:
-                freq2[f2] = 1
-
-        if freq1 != freq2:
+        
+        if sorted(Counter(count1).values()) != sorted(Counter(count2).values()):
             return False
 
         return True
