@@ -9,17 +9,16 @@ class Solution:
             return None
 
         s = head
-        f = head
-        d = None
+        f = head.next.next
+        
 
         while f and f.next:
-            d = s
             s = s.next
             f = f.next.next
             
         
           
-        d.next = s.next
+        s.next = s.next.next
         
         return head
 
