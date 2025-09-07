@@ -13,10 +13,7 @@ class Solution:
             else:
                 d.append(d_index+n)
 
-        if r:
-            return "Radiant"
-        else:
-            return "Dire"
+        return 'Radiant' if r else 'Dire'
 
 
                 
